@@ -38,9 +38,11 @@ app.get('/insta',function(req,res){
       , max:  rows.length-1
       , integer: true
       })
-      res.send('<h1>행운의 당첨 아이디는</h1></br><h1>'+rows[gen()].id+'</h1>')
+      var num  = gen();
+      res.send('<h1>행운의 당첨 아이디는</h1></br>'
+      +'<h1>아이디 :'+rows[num].id+'</h1></br>'
+      +'<h1>이름 :'+rows[num].name+'</h1></br>')
 
       }
     })
-
 })
